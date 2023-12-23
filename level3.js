@@ -1,0 +1,1 @@
+document.querySelector("#name-inp").innerHTML=`level 3`
