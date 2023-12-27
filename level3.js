@@ -1,3 +1,4 @@
+display++;
 document.querySelector("#name-inp").innerHTML=`
 
 
