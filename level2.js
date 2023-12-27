@@ -3,7 +3,9 @@ document.querySelector("#name-inp").innerHTML=`
 <div class="judge" id="true">true</div>
 <div class="judge" id="false">false</div>
 <div class="lvl2-board"> 
-<div class="next">press me</div>
+
+<button class="next">press me</button>
+
  <div class="lvl2-card" id="card1"></div>
  <div class="lvl2-card" id="card2"></div>
  <div class="lvl2-card" id="card3"></div>
@@ -20,9 +22,10 @@ document.querySelector("#name-inp").innerHTML=`
 
 
 `
+let c=0;
 levelCounter++;
 document.querySelector(".next").addEventListener("click", function(){
-    loadtran(up);
+    loadtran(up,2);
 });
 const dhoniQuestions = [
     {
@@ -188,4 +191,7 @@ function checkVal(val){
     console.log(judge);
    
     // dhoniQuestions.splice(0,mix);
+c++;
 });
+
+

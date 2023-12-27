@@ -1,7 +1,11 @@
 let score =0;
+
 let levelCounter =1;
 let up = "0%";
 let dwn = "100%";
+
+
+
 document.querySelector(".go").addEventListener("click", getVal)
 function popUp(){
 
@@ -54,7 +58,7 @@ function getVal(){
        popUp(reason);
     }
     if(!num){
-        loadtran(up);
+        loadtran(up ,1);
         levelCounter++;
         //load lvl1
         
@@ -63,9 +67,10 @@ function getVal(){
 }
 
 
-function loadtran(val){
+function loadtran(val,display){
     
     document.querySelector("#inbet").style.top= val;
+    document.querySelector("#inbet").innerHTML += `Congratulations! you have passed level ${display} , lets move to level ${display+1}`;
     
 }
 
@@ -93,3 +98,11 @@ function j(){
     }
 } 
 
+function zum(){
+    document.querySelector(".tutorial").style.top="70vh"
+    // document.querySelector(".tutorial").style.display = "block"
+}
+document.querySelector(".tutorial").addEventListener("click" ,function(){
+    document.querySelector(".tutorial").style.top="100vh"
+    // document.querySelector(".tutorial").style.display = "none"
+})
