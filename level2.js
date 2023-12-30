@@ -1,5 +1,10 @@
+display++;
+
 document.querySelector("#name-inp").innerHTML=`
 <div class= "lvl-2_score"> </div>
+
+
+
 <div class="judge" id="true">true</div>
 <div class="judge" id="false">false</div>
 <div class="lvl2-board"> 
@@ -162,10 +167,15 @@ function checkVal(val){
 
  hammertime.on('panend', function (event) {
         const deltaX = event.deltaX;
-        // const threshold = card.offsetWidth / 40;
-        const threshold = 400;
+        // const threshold = card.offsetWidth / 40;{
+     let threshold;
+        if(window.innerWidth <=767){
+          threshold = 10;
+        }
+        else{threshold = 400;}
+        
 
-
+        console.log(threshold)
         if (deltaX > threshold) {
             // Swiped right (like)
             card.style.display = "none";

@@ -58,19 +58,19 @@ function getVal(){
        popUp(reason);
     }
     if(!num){
-        loadtran(up ,1);
+        loadtran(up);
         levelCounter++;
         //load lvl1
         
     }
 
 }
+let display = 1;
 
-
-function loadtran(val,display){
+function loadtran(val){
     
     document.querySelector("#inbet").style.top= val;
-    document.querySelector("#inbet").innerHTML += `Congratulations! you have passed level ${display} , lets move to level ${display+1}`;
+    document.querySelector(".tess").innerHTML = `Congratulations! you have passed level ${display} , lets move to level ${display+1}`;
     
 }
 
